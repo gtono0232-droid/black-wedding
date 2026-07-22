@@ -751,3 +751,71 @@ button:hover {
     font-size:18px;
 
 }
+
+.rsvp {
+
+    min-height:80vh;
+
+    background:#11140d;
+
+    color:#f5f1e8;
+
+    text-align:center;
+
+    padding:80px 30px;
+
+}
+
+
+
+.rsvp h2 {
+
+    color:#c9b27c;
+
+    font-size:42px;
+
+    letter-spacing:3px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.rsvp p {
+
+    max-width:450px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+
+
+.rsvp-box {
+
+    margin:50px auto 0;
+
+    max-width:400px;
+
+    padding:40px;
+
+    border:1px solid #c9b27c;
+
+    background:#161a12;
+
+}
+
+
+
+.rsvp-box h3 {
+
+    font-size:28px;
+
+    font-weight:normal;
+
+    margin-bottom:30px;
+
+}

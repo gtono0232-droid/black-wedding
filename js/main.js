@@ -96,3 +96,27 @@ musicButton.addEventListener("click", () => {
 
 
 });
+
+const guestName = document.getElementById("guestName");
+
+const guestPasses = document.getElementById("guestPasses");
+
+
+const params = new URLSearchParams(window.location.search);
+
+const guestID = params.get("id");
+
+
+if (guestID && invitados[guestID]) {
+
+
+    guestName.innerHTML = invitados[guestID].nombre;
+
+
+    guestPasses.innerHTML =
+    "Tenemos reservados " +
+    invitados[guestID].pases +
+    " lugares para ustedes.";
+
+
+}
