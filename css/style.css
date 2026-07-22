@@ -819,3 +819,57 @@ button:hover {
     margin-bottom:30px;
 
 }
+.rsvp-buttons {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+
+}
+
+
+
+.rsvp-buttons button {
+
+    margin:0;
+
+    min-width:220px;
+
+}
+
+
+
+#yesRSVP {
+
+    background:#c9b27c;
+
+    color:#111;
+
+}
+
+
+
+#noRSVP {
+
+    background:transparent;
+
+    color:#f5f1e8;
+
+}
+.hidden-table {
+
+    display:none;
+
+    margin-top:25px;
+
+    color:#c9b27c;
+
+    font-size:20px;
+
+}

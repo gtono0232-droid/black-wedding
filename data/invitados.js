@@ -1,11 +1,14 @@
 const invitados = {
 
-    "G001": {
+"G001": {
 
-        nombre: "George y Daniela",
+nombre:"George y Daniela",
 
-        pases: 2
+pases:2,
 
-    }
+mesa:"Mesa 12"
+
+}
+
 
 };
