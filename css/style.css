@@ -873,3 +873,72 @@ button:hover {
     font-size:20px;
 
 }
+.countdown{
+
+    padding:100px 20px;
+
+    text-align:center;
+
+}
+
+.countdown h2{
+
+    font-size:42px;
+
+    color:#c9b27c;
+
+    margin-bottom:40px;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+.countdown-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.time-box{
+
+    width:120px;
+
+    padding:25px;
+
+    border:1px solid rgba(201,178,124,.35);
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.03);
+
+    backdrop-filter:blur(8px);
+
+}
+
+.time-box span{
+
+    display:block;
+
+    font-size:48px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+}
+
+.time-box small{
+
+    color:#c9b27c;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+}
