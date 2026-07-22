@@ -1,0 +1,583 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Georgia, serif;
+
+    background:
+    radial-gradient(circle at center, #20251b 0%, #0b0b0b 60%);
+
+    color: #f5f1e8;
+
+}
+
+
+/* =========================
+   PORTADA
+========================= */
+
+
+.welcome {
+
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+}
+
+
+.welcome::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 25px;
+
+    border: 1px solid rgba(201,178,124,.35);
+
+}
+
+
+
+.logo {
+
+    position: relative;
+
+}
+
+
+
+.small-title {
+
+    text-transform: uppercase;
+
+    letter-spacing: 6px;
+
+    color: #c9b27c;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+.logo h1 {
+
+    font-size: 60px;
+
+    letter-spacing: 5px;
+
+    line-height: 1.2;
+
+    animation: fadeDown 2s ease forwards;
+
+}
+
+
+
+.logo h1 span {
+
+    color: #c9b27c;
+
+    font-style: italic;
+
+}
+
+
+
+.logo h2 {
+
+    margin-top: 25px;
+
+    font-size: 22px;
+
+    font-weight: normal;
+
+    color: #8a9468;
+
+    animation: fadeUp 2.5s ease forwards;
+
+}
+
+
+
+.description {
+
+    max-width: 350px;
+
+    line-height: 1.7;
+
+    margin: 30px auto 0;
+
+    text-align: center;
+
+    animation: fadeIn 3s ease forwards;
+
+}
+
+
+
+button {
+
+    margin-top: 60px;
+
+    padding: 15px 45px;
+
+    border: 1px solid #c9b27c;
+
+    background: transparent;
+
+    color: #f5f1e8;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    animation: fadeIn 3.5s ease forwards;
+
+}
+
+
+
+button:hover {
+
+    background: #c9b27c;
+
+    color: black;
+
+}
+
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+
+@keyframes fadeDown {
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(-40px);
+
+    }
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity:0;
+
+    }
+
+    to {
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+.hide {
+
+    animation: exitPage 1.5s ease forwards;
+
+}
+
+
+
+@keyframes exitPage {
+
+    from {
+
+        opacity:1;
+
+    }
+
+
+    to {
+
+        opacity:0;
+
+        transform:scale(1.05);
+
+    }
+
+}
+
+
+/* =========================
+   OCULTAR SECCIONES AL INICIO
+========================= */
+
+
+.hidden {
+
+    display:none;
+
+}
+
+
+
+/* =========================
+   BIENVENIDA
+========================= */
+
+
+.invitation {
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:#11140d;
+
+    color:#f5f1e8;
+
+    padding:40px;
+
+}
+
+
+
+.invitation h2 {
+
+    font-size:45px;
+
+    color:#8a9468;
+
+    margin-bottom:25px;
+
+}
+
+
+/* =========================
+   HISTORIA
+========================= */
+
+
+.story {
+
+    min-height:80vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+    background:#0b0b0b;
+
+}
+
+
+
+.story h2 {
+
+    font-size:42px;
+
+    color:#c9b27c;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.story p {
+
+    max-width:500px;
+
+    line-height:2;
+
+    font-size:18px;
+
+}
+
+
+
+/* =========================
+   GALERIA
+========================= */
+
+
+.gallery {
+
+    min-height:100vh;
+
+    background:#0b0b0b;
+
+    color:#f5f1e8;
+
+    padding:60px 30px;
+
+    text-align:center;
+
+}
+
+
+
+.gallery h2 {
+
+    font-size:42px;
+
+    color:#8a9468;
+
+    margin-bottom:50px;
+
+}
+
+
+
+.photos {
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:40px;
+
+    max-width:1000px;
+
+    margin:auto;
+
+}
+
+
+
+.photo {
+
+    width:100%;
+
+    height:450px;
+
+    object-fit:cover;
+
+    border:1px solid #c9b27c;
+
+    background:#161a12;
+
+    transition:.5s;
+
+}
+
+
+
+.photo:hover {
+
+    transform:scale(1.03);
+
+}
+
+
+
+/* =========================
+   EVENTO
+========================= */
+
+
+.event {
+
+    min-height:100vh;
+
+    background:#11140d;
+
+    color:#f5f1e8;
+
+    padding:80px 30px;
+
+    text-align:center;
+
+}
+
+
+
+.event h2 {
+
+    font-size:42px;
+
+    color:#c9b27c;
+
+    margin-bottom:50px;
+
+}
+
+
+
+.date {
+
+    margin-bottom:60px;
+
+}
+
+
+
+.date span {
+
+    display:block;
+
+    font-size:90px;
+
+    color:#c9b27c;
+
+}
+
+
+
+.date p {
+
+    text-transform:uppercase;
+
+    letter-spacing:5px;
+
+}
+
+
+
+.timeline {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:70px;
+
+}
+
+
+
+.event-item {
+
+    width:220px;
+
+    padding:30px;
+
+    border:1px solid #c9b27c;
+
+    background:#161a12;
+
+}
+
+
+
+.event-item h3 {
+
+    color:#c9b27c;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.event-item p {
+
+    font-size:25px;
+
+}
+
+
+
+.location {
+
+    max-width:500px;
+
+    margin:auto;
+
+    border-top:1px solid #c9b27c;
+
+    padding-top:40px;
+
+}
+
+
+
+.location a {
+
+    display:inline-block;
+
+    padding:15px 40px;
+
+    border:1px solid #c9b27c;
+
+    color:#f5f1e8;
+
+    text-decoration:none;
+
+    margin-top:25px;
+
+}
