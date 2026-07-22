@@ -581,3 +581,173 @@ button:hover {
     margin-top:25px;
 
 }
+.show-content {
+
+    animation: revealContent 1.5s ease forwards;
+
+}
+
+
+@keyframes revealContent {
+
+    from {
+
+        opacity:0;
+
+        transform: translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform: translateY(0);
+
+    }
+
+}
+.music-button {
+
+    position: fixed;
+
+    bottom: 30px;
+
+    right: 30px;
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: 1px solid #c9b27c;
+
+    background: #11140d;
+
+    color: #c9b27c;
+
+    font-size: 22px;
+
+    margin: 0;
+
+    padding: 0;
+
+    display: none;
+
+    z-index: 1000;
+
+}
+
+
+.music-button:hover {
+
+    background:#c9b27c;
+
+    color:#111;
+
+}
+.dresscode {
+
+    min-height:80vh;
+
+    background:#0b0b0b;
+
+    color:#f5f1e8;
+
+    text-align:center;
+
+    padding:80px 30px;
+
+}
+
+
+
+.dresscode h2 {
+
+    color:#c9b27c;
+
+    font-size:42px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.dresscode h3 {
+
+    font-size:32px;
+
+    font-weight:normal;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.dresscode p {
+
+    max-width:450px;
+
+    margin:0 auto 50px;
+
+    line-height:1.8;
+
+}
+
+
+
+.dress-details {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.dress-details div {
+
+    width:250px;
+
+    padding:30px;
+
+    border:1px solid #c9b27c;
+
+    background:#11140d;
+
+}
+
+
+
+.dress-details strong {
+
+    display:block;
+
+    color:#c9b27c;
+
+    font-size:20px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.dress-details span {
+
+    font-size:18px;
+
+}

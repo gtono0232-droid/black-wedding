@@ -4,7 +4,11 @@ const welcome = document.getElementById("welcome");
 
 const content = document.getElementById("content");
 
+const music = document.getElementById("music");
 
+const musicButton = document.getElementById("musicButton");
+
+let playing = true;
 
 button.addEventListener("click", () => {
 
@@ -24,13 +28,31 @@ button.addEventListener("click", () => {
 
 
 
+        // Reproducir música
+
+        music.play().catch(() => {
+
+            console.log("El navegador bloqueó la reproducción automática");
+
+        });
+musicButton.style.display = "block";
+
+
+
+
         // Mostrar contenido
 
         content.classList.remove("hidden");
 
 
 
-        // Ir al inicio del contenido
+        // Animación de entrada
+
+        content.classList.add("show-content");
+
+
+
+        // Ir al inicio de la invitación
 
         window.scrollTo({
 
@@ -44,6 +66,33 @@ button.addEventListener("click", () => {
 
     },1500);
 
+
+
+});
+musicButton.addEventListener("click", () => {
+
+
+    if (playing) {
+
+
+        music.pause();
+
+        musicButton.innerHTML = "🔇";
+
+        playing = false;
+
+
+    } else {
+
+
+        music.play();
+
+        musicButton.innerHTML = "♫";
+
+        playing = true;
+
+
+    }
 
 
 });
