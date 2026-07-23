@@ -1,15 +1,18 @@
-ACTUALIZACIÓN DE IDENTIDAD VISUAL
+GALERÍA EDITORIAL CÉSAR & VIANEY
 
-Agrega:
-- Monograma oficial en la carta
-- Iconos en cuenta regresiva, galería, evento, ubicación y RSVP
-- Separadores botánicos
-- Pie de página con monograma
+Incluye:
+- 10 fotografías optimizadas para web
+- Diseño editorial tipo revista
+- Foto principal de gran formato
+- Lightbox con flechas, contador, teclado y swipe
+- Diseño responsive para celular
 
 Instalación:
 1. Haz un commit de respaldo.
 2. Reemplaza index.html.
 3. Reemplaza css/sections.css.
-4. Confirma que assets/icons contenga todos los SVG del kit.
-5. Presiona Ctrl + F5.
-6. Prueba en computadora y celular.
+4. Reemplaza js/main.js.
+5. Copia assets/images/gallery dentro de assets/images.
+   Debe quedar: assets/images/gallery/gallery-01.jpg ... gallery-10.jpg
+6. No borres assets/icons, assets/music ni data.
+7. Presiona Ctrl + F5 y prueba todo.
