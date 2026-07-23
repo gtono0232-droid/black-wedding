@@ -1,17 +1,26 @@
-SPLASH ANIMADO DE HOJAS DE LAUREL
+CIERRE DEFINITIVO — MEDALLÓN DORADO
 
-Funcionamiento:
-- Se activa una sola vez al llegar al cierre de la invitación.
-- Aparecen pequeñas hojas verde olivo, verde claro y doradas.
-- La animación dura aproximadamente 4 segundos.
-- No bloquea botones ni el desplazamiento.
-- Se desactiva automáticamente para usuarios que prefieren menos movimiento.
+SECUENCIA
+1. Al llegar al footer comienza el splash existente.
+2. La invitación permanece visible 20 segundos.
+3. La información y la música comienzan a desvanecerse.
+4. Hojas doradas llegan desde los bordes y convergen en el centro.
+5. Aparece el medallón: CÉSAR · VIANEY · 2026.
+6. Un reflejo metálico cruza el medallón periódicamente.
+7. Debajo aparece: César C.G. 2026™.
 
-Instalación:
-1. Haz un commit de respaldo.
+INSTALACIÓN
+1. Haz un commit o copia de respaldo.
 2. Reemplaza index.html.
 3. Reemplaza css/sections.css.
-4. Copia js/laurel-splash.js dentro de la carpeta js.
-5. Conserva js/main.js y todos los demás archivos.
-6. Presiona Ctrl + F5.
-7. Baja hasta el cierre para verla. Solo se reproduce una vez por carga de página.
+4. Copia js/final-medallion.js.
+5. Copia assets/icons/final-medallion.svg.
+6. Conserva js/main.js y js/laurel-splash.js.
+7. Elimina referencias a js/self-destruct.js o js/final-seal.js si las agregaste.
+8. Presiona Ctrl + F5.
+
+AJUSTAR EL TIEMPO
+En js/final-medallion.js busca:
+}, 20000);
+
+20000 = 20 segundos.
