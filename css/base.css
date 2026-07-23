@@ -1,0 +1,61 @@
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:var(--font-text);
+
+    background:var(--color-fondo);
+
+    color:var(--color-texto);
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+section{
+
+    padding:90px 25px;
+
+}
+
+h1,h2,h3{
+
+    font-family:var(--font-title);
+
+    font-weight:600;
+
+}
+
+p{
+
+    line-height:1.8;
+
+}
+
+.hidden{
+
+    display:none;
+
+}

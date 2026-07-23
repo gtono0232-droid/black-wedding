@@ -5,15 +5,17 @@
 }
 
 
-body {
+body{
 
-    font-family: Georgia, serif;
+    font-family:'Montserrat',sans-serif;
 
-    background:
-    radial-gradient(circle at center, #20251b 0%, #0b0b0b 60%);
+    background:#F6F1E8;
 
-    color: #f5f1e8;
+    color:#4A443D;
 
+    overflow-x:hidden;
+
+}
 }
 
 
@@ -22,101 +24,121 @@ body {
 ========================= */
 
 
-.welcome {
+.welcome{
 
-    height: 100vh;
+    min-height:100vh;
 
-    display: flex;
+    display:flex;
 
-    flex-direction: column;
+    flex-direction:column;
 
-    justify-content: center;
+    justify-content:center;
 
-    align-items: center;
+    align-items:center;
 
-    text-align: center;
+    width:100%;
 
-    position: relative;
+    text-align:center;
+
+    position:relative;
+
+    background:linear-gradient(180deg,#F8F4EC 0%,#F2ECE2 100%);
+
+}
+.welcome::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:35px;
+
+    bottom:35px;
+
+    left:35px;
+
+    right:35px;
+
+    border:1px solid rgba(110,119,87,.25);
+
+    border-radius:8px;
 
 }
 
 
-.welcome::before {
+.logo{
 
-    content: "";
+    position:relative;
 
-    position: absolute;
+    width:100%;
 
-    inset: 25px;
+    display:flex;
 
-    border: 1px solid rgba(201,178,124,.35);
+    flex-direction:column;
 
-}
+    align-items:center;
 
+    justify-content:center;
 
-
-.logo {
-
-    position: relative;
+    text-align:center;
 
 }
 
 
+.small-title{
 
-.small-title {
+    color:#8C7A52;
 
-    text-transform: uppercase;
+    letter-spacing:7px;
 
-    letter-spacing: 6px;
+    text-transform:uppercase;
 
-    color: #c9b27c;
+    font-size:13px;
 
-    font-size: 14px;
-
-    margin-bottom: 30px;
-
-}
-
-
-
-.logo h1 {
-
-    font-size: 60px;
-
-    letter-spacing: 5px;
-
-    line-height: 1.2;
-
-    animation: fadeDown 2s ease forwards;
+    margin-bottom:35px;
 
 }
 
 
+.logo h1{
 
-.logo h1 span {
+    font-family:'Cormorant Garamond',serif;
 
-    color: #c9b27c;
+    font-size:78px;
 
-    font-style: italic;
+    font-weight:600;
+
+    color:#4A443D;
+
+    letter-spacing:4px;
+
+    line-height:1.1;
+
+}
+
+
+.logo h1 span{
+
+    color:#B69453;
+
+    font-style:italic;
 
 }
 
 
+.logo h2{
 
-.logo h2 {
+    margin-top:20px;
 
-    margin-top: 25px;
+    font-size:22px;
 
-    font-size: 22px;
+    font-weight:400;
 
-    font-weight: normal;
+    color:#6E7757;
 
-    color: #8a9468;
-
-    animation: fadeUp 2.5s ease forwards;
+    letter-spacing:2px;
 
 }
-
 
 
 .description {
@@ -135,36 +157,40 @@ body {
 
 
 
-button {
+button{
 
-    margin-top: 60px;
+    margin-top:55px;
 
-    padding: 15px 45px;
+    padding:18px 55px;
 
-    border: 1px solid #c9b27c;
+    background:#6E7757;
 
-    background: transparent;
+    color:white;
 
-    color: #f5f1e8;
+    border:none;
 
-    font-size: 16px;
+    border-radius:50px;
 
-    cursor: pointer;
+    cursor:pointer;
 
-    animation: fadeIn 3.5s ease forwards;
+    font-size:15px;
 
-}
+    letter-spacing:2px;
 
-
-
-button:hover {
-
-    background: #c9b27c;
-
-    color: black;
+    transition:.35s;
 
 }
 
+
+button:hover{
+
+    background:#596347;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.15);
+
+}
 
 
 /* =========================

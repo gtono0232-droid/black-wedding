@@ -1,0 +1,43 @@
+:root{
+
+    /* Colores */
+
+    --color-fondo:#F7F3EC;
+
+    --color-papel:#FFFDF8;
+
+    --color-verde:#6E7757;
+
+    --color-verde-oscuro:#4F5743;
+
+    --color-dorado:#C4A46B;
+
+    --color-texto:#47413B;
+
+    --color-texto-claro:#786F64;
+
+    --color-blanco:#FFFFFF;
+
+    --color-borde:#D8D0C3;
+
+    /* Tipografías */
+
+    --font-title:'Cormorant Garamond',serif;
+
+    --font-text:'Montserrat',sans-serif;
+
+    /* Sombras */
+
+    --shadow-soft:0 10px 30px rgba(0,0,0,.08);
+
+    --shadow-card:0 20px 60px rgba(0,0,0,.10);
+
+    /* Bordes */
+
+    --radius:18px;
+
+    /* Animaciones */
+
+    --transition:.35s ease;
+
+}
