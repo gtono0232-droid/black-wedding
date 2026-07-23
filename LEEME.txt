@@ -1,14 +1,17 @@
-ACTUALIZACIÓN TIMELINE + SELLO
+SPLASH ANIMADO DE HOJAS DE LAUREL
 
-Incluye:
-- Baile a las 10:30 PM
-- Icono dorado para Baile
-- Sello de cera restaurado con el monograma oficial
+Funcionamiento:
+- Se activa una sola vez al llegar al cierre de la invitación.
+- Aparecen pequeñas hojas verde olivo, verde claro y doradas.
+- La animación dura aproximadamente 4 segundos.
+- No bloquea botones ni el desplazamiento.
+- Se desactiva automáticamente para usuarios que prefieren menos movimiento.
 
 Instalación:
 1. Haz un commit de respaldo.
 2. Reemplaza index.html.
 3. Reemplaza css/sections.css.
-4. Copia assets/icons/timeline-dance.svg dentro de assets/icons.
-5. Confirma que assets/icons/monogram.svg siga existiendo.
+4. Copia js/laurel-splash.js dentro de la carpeta js.
+5. Conserva js/main.js y todos los demás archivos.
 6. Presiona Ctrl + F5.
+7. Baja hasta el cierre para verla. Solo se reproduce una vez por carga de página.

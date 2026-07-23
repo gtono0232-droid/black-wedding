@@ -859,3 +859,240 @@ body.lightbox-open{
     pointer-events:none;
     transform:scale(1.35);
 }
+
+
+/* ===========================
+   UBICACIÓN PREMIUM
+=========================== */
+
+.premium-location{
+    width:min(100%,700px);
+    margin:0 auto;
+    padding:48px 38px;
+    position:relative;
+    text-align:center;
+    border:1px solid rgba(200,169,110,.38);
+    background:
+        linear-gradient(
+            rgba(255,253,248,.92),
+            rgba(247,244,236,.96)
+        );
+    box-shadow:0 22px 55px rgba(71,65,59,.12);
+}
+
+.premium-location::before{
+    content:"";
+    position:absolute;
+    inset:12px;
+    border:1px solid rgba(200,169,110,.2);
+    pointer-events:none;
+}
+
+.location-icon{
+    width:64px;
+    height:64px;
+    margin:0 auto 14px;
+    display:grid;
+    place-items:center;
+}
+
+.location-icon img{
+    width:42px;
+    height:42px;
+    object-fit:contain;
+}
+
+.premium-location h3{
+    color:var(--olive-dark);
+    font-size:clamp(38px,6vw,54px);
+    line-height:1;
+}
+
+.location-address{
+    margin-top:20px;
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.9;
+}
+
+.location-actions{
+    margin-top:8px;
+}
+
+.premium-location .button-link{
+    position:relative;
+    z-index:2;
+    min-width:240px;
+}
+
+/* ===========================
+   CIERRE FINAL
+=========================== */
+
+.wedding-footer{
+    padding:110px 24px 120px;
+    position:relative;
+    overflow:hidden;
+}
+
+.wedding-footer::before{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    border:1px solid rgba(200,169,110,.12);
+    border-radius:50%;
+    pointer-events:none;
+}
+
+.footer-monogram{
+    width:126px;
+    height:168px;
+    margin:0 auto 24px;
+    position:relative;
+    z-index:1;
+    object-fit:contain;
+}
+
+.wedding-footer h2{
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.footer-message{
+    width:min(100%,620px);
+    margin:26px auto 0;
+    color:var(--muted);
+    font-size:16px;
+    line-height:1.95;
+}
+
+.footer-names{
+    margin-top:28px;
+    color:var(--olive-dark);
+    font-family:var(--font-title);
+    font-size:34px;
+}
+
+@media (max-width:760px){
+    .premium-location{
+        padding:40px 22px;
+    }
+
+    .premium-location .button-link{
+        width:100%;
+        min-width:0;
+    }
+
+    .wedding-footer{
+        padding:90px 22px 100px;
+    }
+
+    .footer-monogram{
+        width:108px;
+        height:146px;
+    }
+}
+
+
+/* ===========================
+   SPLASH DE HOJAS DE LAUREL
+=========================== */
+
+.laurel-splash{
+    position:fixed;
+    inset:0;
+    z-index:9998;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.laurel-leaf{
+    --leaf-x:50vw;
+    --leaf-y:50vh;
+    --leaf-size:13px;
+    --leaf-rotate:0deg;
+    --leaf-drift:0px;
+    --leaf-fall:55vh;
+    --leaf-duration:2.8s;
+    --leaf-delay:0s;
+
+    position:absolute;
+    left:var(--leaf-x);
+    top:var(--leaf-y);
+    width:var(--leaf-size);
+    height:calc(var(--leaf-size) * 2.15);
+    opacity:0;
+    border-radius:85% 12% 85% 12%;
+    background:var(--olive);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);
+    transform-origin:50% 100%;
+    animation:laurelBurst var(--leaf-duration) cubic-bezier(.19,.72,.25,1)
+        var(--leaf-delay) forwards;
+}
+
+.laurel-leaf.is-gold{
+    background:var(--gold);
+}
+
+.laurel-leaf.is-light{
+    background:#8f956f;
+}
+
+.laurel-leaf::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:12%;
+    bottom:10%;
+    width:1px;
+    background:rgba(255,255,255,.28);
+    transform:rotate(-25deg);
+    transform-origin:center;
+}
+
+@keyframes laurelBurst{
+    0%{
+        opacity:0;
+        transform:
+            translate(-50%,-50%)
+            rotate(var(--leaf-rotate))
+            scale(.35);
+    }
+
+    12%{
+        opacity:.95;
+    }
+
+    48%{
+        opacity:.9;
+        transform:
+            translate(
+                calc(-50% + (var(--leaf-drift) * .45)),
+                calc(-50% - 16vh)
+            )
+            rotate(calc(var(--leaf-rotate) + 210deg))
+            scale(1);
+    }
+
+    100%{
+        opacity:0;
+        transform:
+            translate(
+                calc(-50% + var(--leaf-drift)),
+                calc(-50% + var(--leaf-fall))
+            )
+            rotate(calc(var(--leaf-rotate) + 620deg))
+            scale(.72);
+    }
+}
+
+@media (prefers-reduced-motion:reduce){
+    .laurel-splash{
+        display:none;
+    }
+}
