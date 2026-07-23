@@ -1,18 +1,14 @@
-GALERÍA EDITORIAL CÉSAR & VIANEY
+ACTUALIZACIÓN TIMELINE + SELLO
 
 Incluye:
-- 10 fotografías optimizadas para web
-- Diseño editorial tipo revista
-- Foto principal de gran formato
-- Lightbox con flechas, contador, teclado y swipe
-- Diseño responsive para celular
+- Baile a las 10:30 PM
+- Icono dorado para Baile
+- Sello de cera restaurado con el monograma oficial
 
 Instalación:
 1. Haz un commit de respaldo.
 2. Reemplaza index.html.
 3. Reemplaza css/sections.css.
-4. Reemplaza js/main.js.
-5. Copia assets/images/gallery dentro de assets/images.
-   Debe quedar: assets/images/gallery/gallery-01.jpg ... gallery-10.jpg
-6. No borres assets/icons, assets/music ni data.
-7. Presiona Ctrl + F5 y prueba todo.
+4. Copia assets/icons/timeline-dance.svg dentro de assets/icons.
+5. Confirma que assets/icons/monogram.svg siga existiendo.
+6. Presiona Ctrl + F5.

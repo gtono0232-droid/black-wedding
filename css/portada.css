@@ -230,3 +230,19 @@
     75%{transform:translateY(-42%) scale(1)}
     100%{transform:translateY(-38%) scale(1.03)}
 }
+.wax-seal img{
+    width:58px;
+    height:58px;
+    display:block;
+    object-fit:contain;
+    pointer-events:none;
+}
+.wax-seal{
+    overflow:hidden;
+}
+
+.wax-seal img{
+    width:74px;
+    height:74px;
+    transform:scale(1.35);
+}
