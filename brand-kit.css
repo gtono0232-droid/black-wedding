@@ -1,0 +1,36 @@
+/* Iconos oficiales César & Vianey */
+
+.line-icon{
+    width:72px;
+    height:72px;
+    margin-bottom:22px;
+    display:grid;
+    place-items:center;
+    border:1px solid rgba(200,169,110,.72);
+    border-radius:50%;
+    background:rgba(247,244,236,.72);
+}
+
+.line-icon img{
+    width:43px;
+    height:43px;
+    object-fit:contain;
+}
+
+.brand-divider{
+    width:min(88%,520px);
+    margin:42px auto;
+}
+
+.brand-divider img{
+    width:100%;
+}
+
+.brand-monogram{
+    width:110px;
+    margin:0 auto 24px;
+}
+
+.brand-monogram img{
+    width:100%;
+}

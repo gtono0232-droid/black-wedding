@@ -218,8 +218,9 @@ section p{
     cursor:pointer;
 }
 
-
-/* Información importante */
+/* ===========================
+   INFORMACIÓN IMPORTANTE
+=========================== */
 
 .important-info h2{
     max-width:760px;
@@ -228,60 +229,74 @@ section p{
 }
 
 .important-grid{
-    margin-top:48px;
+    margin-top:50px;
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:24px;
 }
 
 .important-card{
     min-height:360px;
-    padding:34px 28px;
+    padding:36px 30px;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:flex-start;
-    border:1px solid rgba(232,215,180,.42);
-    background:rgba(255,253,248,.94);
+    text-align:center;
     color:var(--text);
+    background:rgba(255,255,255,.94);
+    border:1px solid rgba(200,169,110,.34);
     box-shadow:var(--shadow-soft);
 }
 
 .line-icon{
-    width:58px;
-    height:58px;
-    margin-bottom:20px;
-    display:grid;
-    place-items:center;
-    border:1px solid var(--gold);
-    border-radius:50%;
-    color:var(--gold);
-    font-family:var(--font-title);
-    font-size:30px;
-    line-height:1;
+    width:72px;
+    height:72px;
+    margin:0 auto 24px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:none;
+    border-radius:0;
+    background:transparent;
 }
 
-.envelope-icon{
-    font-size:24px;
+.line-icon img{
+    width:38px;
+    height:38px;
+    display:block;
+    object-fit:contain;
 }
 
 .important-card h3{
     color:var(--olive-dark);
     font-size:32px;
+    line-height:1.1;
 }
 
 .important-card strong{
     display:block;
-    margin-top:6px;
+    margin-top:8px;
     color:var(--gold);
     font-family:var(--font-title);
     font-size:23px;
     font-weight:600;
+    line-height:1.25;
 }
 
 .important-card p{
     margin-top:18px;
-    color:var(--muted);
+    color:var(--text);
     font-size:14px;
     line-height:1.85;
+}
+
+@media (max-width:900px){
+    .important-grid{
+        grid-template-columns:1fr;
+    }
+
+    .important-card{
+        min-height:auto;
+    }
 }

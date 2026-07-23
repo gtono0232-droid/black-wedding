@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 260">
+  <rect x="18" y="14" width="144" height="232" rx="72" fill="none" stroke="#C8A96E" stroke-width="2"/>
+  <path d="M18 78C5 88 5 106 18 116M162 78c13 10 13 28 0 38" fill="none" stroke="#C8A96E" stroke-width="2"/>
+  <g fill="#4B533A" font-family="Georgia, serif" text-anchor="middle">
+    <text x="90" y="92" font-size="66">C</text>
+    <text x="90" y="137" font-size="34" fill="#C8A96E">&amp;</text>
+    <text x="90" y="196" font-size="66">V</text>
+    <text x="90" y="224" font-size="15" letter-spacing="4" fill="#C8A96E">26·09·26</text>
+  </g>
+  <path d="M47 53c15-22 29-24 43-24M133 53c-15-22-29-24-43-24" fill="none" stroke="#C8A96E" stroke-width="1.7"/>
+  <path d="M49 207c-13 4-20 14-24 26M131 207c13 4 20 14 24 26" fill="none" stroke="#C8A96E" stroke-width="1.7"/>
+</svg>
