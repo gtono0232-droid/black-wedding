@@ -1,43 +1,14 @@
 :root{
-
-    /* Colores */
-
-    --color-fondo:#F7F3EC;
-
-    --color-papel:#FFFDF8;
-
-    --color-verde:#6E7757;
-
-    --color-verde-oscuro:#4F5743;
-
-    --color-dorado:#C4A46B;
-
-    --color-texto:#47413B;
-
-    --color-texto-claro:#786F64;
-
-    --color-blanco:#FFFFFF;
-
-    --color-borde:#D8D0C3;
-
-    /* Tipografías */
-
+    --paper:#fbf8f1;
+    --beige:#efe6d6;
+    --olive:#6e7757;
+    --olive-dark:#4e5742;
+    --gold:#b89452;
+    --text:#4a443d;
+    --muted:#7c7368;
+    --white:#ffffff;
+    --line:rgba(184,148,82,.35);
+    --shadow-soft:0 18px 45px rgba(74,68,61,.12);
     --font-title:'Cormorant Garamond',serif;
-
     --font-text:'Montserrat',sans-serif;
-
-    /* Sombras */
-
-    --shadow-soft:0 10px 30px rgba(0,0,0,.08);
-
-    --shadow-card:0 20px 60px rgba(0,0,0,.10);
-
-    /* Bordes */
-
-    --radius:18px;
-
-    /* Animaciones */
-
-    --transition:.35s ease;
-
 }

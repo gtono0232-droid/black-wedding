@@ -1,0 +1,14 @@
+BLACK WEDDING — ACTUALIZACIÓN INFORMACIÓN IMPORTANTE
+
+Incluye:
+- Dress Code: Gala Formal Black
+- Evento exclusivo para adultos
+- Lluvia de sobres
+- Diseño responsive para celular
+
+Instalación:
+1. Haz un commit de respaldo.
+2. Copia index.html y la carpeta css dentro de tu proyecto.
+3. Reemplaza los archivos cuando Windows lo solicite.
+4. Conserva assets, data y js/main.js.
+5. Prueba con index.html?id=G001.

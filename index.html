@@ -1,54 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>César & Vianey</title>
 
-    <title>Black Wedding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet" href="css/variables.css">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/portada.css">
-<link rel="stylesheet" href="css/historia.css">
-<link rel="stylesheet" href="css/countdown.css">
-<link rel="stylesheet" href="css/galeria.css">
-<link rel="stylesheet" href="css/evento.css">
-<link rel="stylesheet" href="css/dresscode.css">
-<link rel="stylesheet" href="css/rsvp.css">
-<link rel="stylesheet" href="css/footer.css">
-<link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/portada.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
-
 
 <body>
 
-
-<!-- PORTADA CON SOBRE -->
-
 <main class="welcome" id="welcome">
-
     <div class="envelope-scene">
-
         <div class="envelope" id="envelope">
-
             <div class="envelope-back"></div>
 
             <div class="invitation-card">
-
                 <div class="card-monogram">
-                    <span>C</span>
-                    <i></i>
-                    <span>V</span>
+                    <span>C</span><i></i><span>V</span>
                 </div>
 
                 <p class="small-title">Nuestra boda</p>
@@ -60,354 +37,185 @@
                 </h1>
 
                 <h2>26 · Septiembre · 2026</h2>
-
                 <p class="venue-name">Casa San Ángel</p>
-
             </div>
 
             <div class="envelope-left"></div>
             <div class="envelope-right"></div>
             <div class="envelope-bottom"></div>
-
             <div class="envelope-flap"></div>
 
-            <button
-                id="openInvitation"
-                class="wax-seal"
-                type="button"
-                aria-label="Abrir invitación"
-            >
-                <span>C</span>
-                <i>&amp;</i>
-                <span>V</span>
+            <button id="openInvitation" class="wax-seal" type="button" aria-label="Abrir invitación">
+                <span>C</span><i>&amp;</i><span>V</span>
             </button>
-
         </div>
 
-        <p class="open-instruction">
-            Toca el sello para abrir la invitación
-        </p>
-
+        <p class="open-instruction">Toca el sello para abrir la invitación</p>
     </div>
-
 </main>
-
-   
-
-
-<!-- INVITACION -->
 
 <div id="content" class="hidden">
 
-
-<section class="invitation">
-
-
-    <h2>
-        Bienvenidos
-    </h2>
-
-
-    <p>
-        Estamos felices de compartir este momento tan especial con ustedes.
-    </p>
-
-
-</section>
-
-
-
-<!-- HISTORIA -->
-
-
-<section class="story">
-
-
-    <h2>
-        Nuestra historia
-    </h2>
-
-
-    <p>
-        Dos caminos que se encontraron,
-        una historia que seguimos escribiendo
-        y un día que queremos compartir con las personas que más queremos.
-    </p>
-
-
-</section>
-
-<section class="countdown">
-
-    <h2>Faltan</h2>
-
-    <div class="countdown-container">
-
-        <div class="time-box">
-            <span id="days">00</span>
-            <small>Días</small>
+    <section class="invitation section-paper">
+        <div class="section-inner">
+            <p class="eyebrow">César &amp; Vianey</p>
+            <h2>Bienvenidos</h2>
+            <p>Con mucha alegría queremos compartir este día tan especial con ustedes.</p>
         </div>
+    </section>
 
-        <div class="time-box">
-            <span id="hours">00</span>
-            <small>Horas</small>
-        </div>
-
-        <div class="time-box">
-            <span id="minutes">00</span>
-            <small>Minutos</small>
-        </div>
-
-        <div class="time-box">
-            <span id="seconds">00</span>
-            <small>Segundos</small>
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- GALERIA -->
-
-
-<section class="gallery">
-
-
-    <h2>
-        Nuestros momentos
-    </h2>
-
-
-    <div class="photos">
-
-
-        <img src="assets/images/foto1.jpg" class="photo">
-
-
-        <img src="assets/images/foto2.jpg" class="photo">
-
-
-        <img src="assets/images/foto3.jpg" class="photo">
-
-
-    </div>
-
-
-</section>
-
-
-
-<!-- EVENTO -->
-
-
-<section class="event">
-
-
-    <h2>
-        El evento
-    </h2>
-
-
-    <div class="date">
-
-        <span>
-            26
-        </span>
-
-        <p>
-            Septiembre
-        </p>
-
-        <p>
-            2026
-        </p>
-
-
-    </div>
-
-
-
-    <div class="timeline">
-
-
-        <div class="event-item">
-
-            <h3>
-                Ceremonia
-            </h3>
-
+    <section class="story section-olive">
+        <div class="section-inner narrow">
+            <p class="eyebrow light">Nuestra historia</p>
+            <h2>Dos caminos, una historia</h2>
             <p>
-                7:00 PM
+                Dos caminos que se encontraron, una historia que seguimos escribiendo
+                y un día que queremos compartir con las personas que más queremos.
             </p>
-
         </div>
+    </section>
 
+    <section class="countdown section-paper">
+        <div class="section-inner">
+            <p class="eyebrow">Faltan</p>
+            <h2>Para nuestro gran día</h2>
 
-
-        <div class="event-item">
-
-            <h3>
-                Recepción
-            </h3>
-
-            <p>
-                8:00 PM
-            </p>
-
+            <div class="countdown-container">
+                <div class="time-box"><span id="days">00</span><small>Días</small></div>
+                <div class="time-box"><span id="hours">00</span><small>Horas</small></div>
+                <div class="time-box"><span id="minutes">00</span><small>Minutos</small></div>
+                <div class="time-box"><span id="seconds">00</span><small>Segundos</small></div>
+            </div>
         </div>
+    </section>
 
+    <section class="gallery section-beige">
+        <div class="section-inner wide">
+            <p class="eyebrow">Nuestros momentos</p>
+            <h2>Una historia en imágenes</h2>
 
-
-        <div class="event-item">
-
-            <h3>
-                Cena
-            </h3>
-
-            <p>
-                9:00 PM
-            </p>
-
+            <div class="photos">
+                <img src="assets/images/foto1.jpg" class="photo" alt="César y Vianey">
+                <img src="assets/images/foto2.jpg" class="photo" alt="César y Vianey">
+                <img src="assets/images/foto3.jpg" class="photo" alt="César y Vianey">
+            </div>
         </div>
+    </section>
 
+    <section class="event section-paper">
+        <div class="section-inner wide">
+            <p class="eyebrow">El evento</p>
+            <h2>26 de septiembre de 2026</h2>
 
-    </div>
+            <div class="timeline">
+                <article class="event-item">
+                    <h3>Ceremonia</h3>
+                    <p>7:00 PM</p>
+                </article>
 
+                <article class="event-item">
+                    <h3>Recepción</h3>
+                    <p>8:00 PM</p>
+                </article>
 
+                <article class="event-item">
+                    <h3>Cena</h3>
+                    <p>9:00 PM</p>
+                </article>
+            </div>
 
-    <div class="location">
+            <div class="location">
+                <h3>Casa San Ángel</h3>
+                <p>
+                    Boulevard Federico Benítez López 12429<br>
+                    Los Españoles<br>
+                    Tijuana, B.C.
+                </p>
 
-
-        <h3>
-            Casa San Angel
-        </h3>
-
-
-        <p>
-            Boulevard Federico Benítez López 12429<br>
-            Los Españoles<br>
-            Tijuana, B.C.
-        </p>
-
-
-        <a href="https://www.google.com/maps/search/?api=1&query=Casa+San+Angel+Tijuana" target="_blank">
-            Ver ubicación
-        </a>
-
-
-    </div>
-
-
-</section>
-
-<section class="dresscode">
-
-
-    <h2>
-        Dress Code
-    </h2>
-
-
-    <h3>
-        Gala Formal Black
-    </h3>
-
-
-    <p>
-        Una noche elegante para celebrar
-        un momento inolvidable.
-    </p>
-
-
-    <div class="dress-details">
-
-
-        <div>
-            <strong>Caballeros</strong>
-            <span>Traje formal Negro</span>
+                <a class="button-link"
+                   href="https://www.google.com/maps/search/?api=1&query=Casa+San+Angel+Tijuana"
+                   target="_blank"
+                   rel="noopener">
+                    Ver ubicación
+                </a>
+            </div>
         </div>
+    </section>
 
+    <section class="important-info section-olive">
+        <div class="section-inner wide">
+            <p class="eyebrow light">Información importante</p>
+            <h2>Detalles de nuestra celebración</h2>
 
-        <div>
-            <strong>Damas</strong>
-            <span>Vestido de gala Negro</span>
+            <div class="important-grid">
+
+                <article class="important-card">
+                    <div class="line-icon" aria-hidden="true">◇</div>
+                    <h3>Dress Code</h3>
+                    <strong>Gala Formal Black</strong>
+                    <p>
+                        Caballeros: traje formal negro.<br>
+                        Damas: vestido de gala negro.
+                    </p>
+                </article>
+
+                <article class="important-card">
+                    <div class="line-icon" aria-hidden="true">○</div>
+                    <h3>Celebración</h3>
+                    <strong>Evento exclusivo para adultos</strong>
+                    <p>
+                        Con mucho cariño, hemos decidido celebrar esta ocasión
+                        en un ambiente exclusivo para adultos. Agradecemos de
+                        corazón su comprensión.
+                    </p>
+                </article>
+
+                <article class="important-card">
+                    <div class="line-icon envelope-icon" aria-hidden="true">✉</div>
+                    <h3>Regalos</h3>
+                    <strong>Lluvia de sobres</strong>
+                    <p>
+                        El mejor regalo será compartir este día con ustedes.
+                        Si desean obsequiarnos algo más, agradeceremos con mucho
+                        cariño su participación en nuestra lluvia de sobres.
+                    </p>
+                </article>
+
+            </div>
         </div>
+    </section>
 
+    <section class="rsvp section-paper">
+        <div class="section-inner narrow">
+            <p class="eyebrow">Confirmación</p>
+            <h2>¿Nos acompañas?</h2>
+            <p>Nos encantaría contar con tu presencia en este día tan especial.</p>
 
-    </div>
+            <div class="rsvp-box">
+                <h3 id="guestName">Invitado especial</h3>
+                <p id="guestPasses"></p>
+                <p id="guestTable" class="hidden-table"></p>
 
+                <div class="rsvp-buttons">
+                    <button id="yesRSVP" type="button">Sí, confirmamos</button>
+                    <button id="noRSVP" type="button" class="secondary">No podremos asistir</button>
+                </div>
 
-</section>
-
-<section class="rsvp">
-
-
-    <h2>
-        Confirmación de asistencia
-    </h2>
-
-
-    <p>
-        Nos encantaría contar con tu presencia
-        en este día tan especial.
-    </p>
-
-
-    <div class="rsvp-box">
-
-
-        <h3 id="guestName">
-    ¿Nos acompañas?
-</h3>
-
-
-<p id="guestPasses"></p>
-
-<p id="guestTable" class="hidden-table"></p>
-
-       <div class="rsvp-buttons">
-
-    <button id="yesRSVP">
-        Sí, confirmamos
-    </button>
-
-
-    <button id="noRSVP">
-        No podremos asistir
-    </button>
-
-</div>
-
-
-
-<p id="rsvpMessage"></p>
-
-
-    </div>
-
-
-</section>
-
+                <p id="rsvpMessage" class="rsvp-message"></p>
+            </div>
+        </div>
+    </section>
 
 </div>
 
 <audio id="music" loop>
-
     <source src="assets/music/wedding.mp3" type="audio/mpeg">
-
 </audio>
 
-<button id="musicButton" class="music-button">
-    ♫
-</button>
+<button id="musicButton" class="music-button" type="button" aria-label="Activar o silenciar música">♫</button>
 
 <script src="data/invitados.js"></script>
-
 <script src="js/main.js"></script>
 
-
 </body>
-
 </html>

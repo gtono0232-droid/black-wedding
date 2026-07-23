@@ -1,0 +1,62 @@
+@media (max-width:760px){
+    .welcome{padding:22px 10px}
+    .welcome::before{inset:12px}
+    .envelope-scene{width:min(96vw,500px)}
+
+    .invitation-card{
+        left:6%;
+        width:88%;
+        padding:18px 16px;
+    }
+
+    .invitation-card h1{
+        flex-direction:column;
+        gap:0;
+    }
+
+    .invitation-card h1 span{
+        line-height:.72;
+    }
+
+    .open-instruction{
+        font-size:9px;
+        letter-spacing:.1em;
+    }
+
+    .countdown-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .time-box{
+        border-radius:20px;
+    }
+
+    .photos,
+    .timeline,
+    .dress-details{
+        grid-template-columns:1fr;
+    }
+
+    .photo{
+        height:420px;
+    }
+
+    .rsvp-buttons{
+        flex-direction:column;
+    }
+
+    .rsvp-buttons button{
+        width:100%;
+    }
+}
+
+
+@media (max-width:900px){
+    .important-grid{
+        grid-template-columns:1fr;
+    }
+
+    .important-card{
+        min-height:auto;
+    }
+}

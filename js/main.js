@@ -1,229 +1,142 @@
 const button = document.getElementById("openInvitation");
-
-const welcome = document.getElementById("welcome");
-
-const content = document.getElementById("content");
-
-const music = document.getElementById("music");
-
-const musicButton = document.getElementById("musicButton");
-
 const envelope = document.getElementById("envelope");
+const welcome = document.getElementById("welcome");
+const content = document.getElementById("content");
+const music = document.getElementById("music");
+const musicButton = document.getElementById("musicButton");
 
 let playing = true;
 
-
-
 button.addEventListener("click", () => {
-
     envelope.classList.add("open");
 
-    music.play().catch(() => {
-        console.log("Audio bloqueado");
-    });
+    setTimeout(() => {
+        music.play().catch(() => console.log("Audio bloqueado"));
+    }, 900);
 
     setTimeout(() => {
-
-    welcome.classList.add("hide");
-
-},2600);
+        welcome.classList.add("hide");
+    }, 2600);
 
     setTimeout(() => {
-
         welcome.style.display = "none";
         musicButton.style.display = "block";
-
         content.classList.remove("hidden");
         content.classList.add("show-content");
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-
+        window.scrollTo({ top: 0, behavior: "smooth" });
     }, 3900);
-
 });
-
-
-
 
 musicButton.addEventListener("click", () => {
-
-
-    if(playing){
-
-
+    if (playing) {
         music.pause();
-
-        musicButton.innerHTML="🔇";
-
-        playing=false;
-
-
-    }else{
-
-
-        music.play();
-
-        musicButton.innerHTML="♫";
-
-        playing=true;
-
-
+        musicButton.textContent = "🔇";
+        playing = false;
+    } else {
+        music.play().catch(() => {});
+        musicButton.textContent = "♫";
+        playing = true;
     }
-
-
 });
 
-
-
-
-
 const params = new URLSearchParams(window.location.search);
-
 const guestID = params.get("id");
 
-
-
 const guestName = document.getElementById("guestName");
-
 const guestPasses = document.getElementById("guestPasses");
-
 const guestTable = document.getElementById("guestTable");
-
-if(guestID && invitados[guestID]){
-
-
-    guestName.innerHTML = invitados[guestID].nombre;
-
-
-    guestPasses.innerHTML =
-    "Tenemos reservados " +
-    invitados[guestID].pases +
-    " lugares para ustedes.";
-
-guestTable.innerHTML =
-"Mesa asignada : " +
-invitados[guestID].mesa;
-
-
-}
-
-
-
-
 const yesButton = document.getElementById("yesRSVP");
-
 const noButton = document.getElementById("noRSVP");
-
 const rsvpMessage = document.getElementById("rsvpMessage");
 
 const scriptURL = "https://script.google.com/macros/s/AKfycbx-6gNJVZ0UOsjjNJFBp7SaUSSHVyOUYmFpgm0oy0xuAscFPY0ekrleZ3sYOBI-LQg/exec";
 
-yesButton.addEventListener("click", () => {
+const invitadoValido =
+    typeof invitados !== "undefined" &&
+    guestID &&
+    invitados[guestID];
 
+if (invitadoValido) {
+    const invitado = invitados[guestID];
 
-    let invitado = invitados[guestID];
+    guestName.textContent = invitado.nombre;
+    guestPasses.textContent =
+        `Tenemos reservados ${invitado.pases} lugares para ustedes.`;
+    guestTable.textContent = `Mesa asignada: ${invitado.mesa}`;
+} else {
+    guestName.textContent = "Invitado especial";
+    guestPasses.textContent =
+        "Abre la invitación desde tu enlace personalizado para confirmar.";
+    yesButton.disabled = true;
+    noButton.disabled = true;
+}
 
+async function sendRSVP(respuesta) {
+    if (!invitadoValido) return;
 
-    rsvpMessage.innerHTML =
-    "Gracias " + invitado.nombre + ", hemos recibido su confirmación.";
+    const invitado = invitados[guestID];
 
+    yesButton.disabled = true;
+    noButton.disabled = true;
+    rsvpMessage.textContent = "Registrando respuesta...";
 
-    fetch(scriptURL, {
+    try {
+        await fetch(scriptURL, {
+            method: "POST",
+            mode: "no-cors",
+            body: JSON.stringify({
+                codigo: guestID,
+                nombre: invitado.nombre,
+                pases: invitado.pases,
+                mesa: invitado.mesa,
+                respuesta
+            })
+        });
 
-        method: "POST",
+        if (respuesta === "Confirmado") {
+            rsvpMessage.textContent =
+                `Gracias ${invitado.nombre}, hemos recibido su confirmación.`;
+            guestTable.style.display = "block";
+        } else {
+            rsvpMessage.textContent =
+                `Gracias ${invitado.nombre}. Lamentamos no contar con su presencia.`;
+            guestTable.style.display = "none";
+        }
+    } catch (error) {
+        console.error(error);
+        rsvpMessage.textContent =
+            "No pudimos registrar la respuesta. Inténtalo nuevamente.";
+        yesButton.disabled = false;
+        noButton.disabled = false;
+    }
+}
 
-        body: JSON.stringify({
+yesButton.addEventListener("click", () => sendRSVP("Confirmado"));
+noButton.addEventListener("click", () => sendRSVP("No asiste"));
 
-            codigo: guestID,
+const weddingDate = new Date("2026-09-26T19:00:00-07:00").getTime();
 
-            nombre: invitado.nombre,
+function updateCountdown() {
+    const distance = weddingDate - Date.now();
+    const container = document.querySelector(".countdown-container");
 
-            pases: invitado.pases,
+    if (!container) return;
 
-            mesa: invitado.mesa,
-
-            respuesta: "Confirmado"
-
-        })
-
-    });
-
-
-    guestTable.style.display = "block";
-
-
-});
-
-noButton.addEventListener("click", () => {
-
-
-    let invitado = invitados[guestID];
-
-
-    rsvpMessage.innerHTML =
-    "Gracias " + invitado.nombre + ". Lamentamos no contar con su presencia.";
-
-
-    fetch(scriptURL, {
-
-        method: "POST",
-
-        body: JSON.stringify({
-
-            codigo: guestID,
-
-            nombre: invitado.nombre,
-
-            pases: invitado.pases,
-
-            mesa: invitado.mesa,
-
-            respuesta: "No asiste"
-
-        })
-
-    });
-
-
-});
-const weddingDate = new Date("September 26, 2026 19:00:00").getTime();
-
-function updateCountdown(){
-
-    const now = new Date().getTime();
-
-    const distance = weddingDate - now;
-
-    if(distance <= 0){
-
-        document.querySelector(".countdown-container").innerHTML =
-        "<h2>¡Hoy es el gran día!</h2>";
-
+    if (distance <= 0) {
+        container.innerHTML = "<h3>¡Hoy es el gran día!</h3>";
         return;
-
     }
 
-    const days = Math.floor(distance / (1000*60*60*24));
+    const days = Math.floor(distance / 86400000);
+    const hours = Math.floor((distance % 86400000) / 3600000);
+    const minutes = Math.floor((distance % 3600000) / 60000);
+    const seconds = Math.floor((distance % 60000) / 1000);
 
-    const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-
-    const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
-
-    const seconds = Math.floor((distance % (1000*60)) / 1000);
-
-    document.getElementById("days").innerHTML = days;
-
-    document.getElementById("hours").innerHTML = hours;
-
-    document.getElementById("minutes").innerHTML = minutes;
-
-    document.getElementById("seconds").innerHTML = seconds;
-
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+    document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+    document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
 }
 
 updateCountdown();
-
-setInterval(updateCountdown,1000);
+setInterval(updateCountdown, 1000);
