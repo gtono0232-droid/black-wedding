@@ -1,16 +1,15 @@
-CORRECCIÓN BLACK WEDDING
+ACTUALIZACIÓN DE IDENTIDAD VISUAL
 
-Este paquete corrige:
-- HTML pegado accidentalmente dentro de sections.css
-- Iconos SVG demasiado grandes
-- Iconos provisionales sustituidos por dresscode.svg, celebration.svg y gifts.svg
+Agrega:
+- Monograma oficial en la carta
+- Iconos en cuenta regresiva, galería, evento, ubicación y RSVP
+- Separadores botánicos
+- Pie de página con monograma
 
 Instalación:
-1. Haz un commit de respaldo en GitHub Desktop.
-2. Copia index.html a la raíz de tu proyecto y reemplázalo.
-3. Copia css/sections.css dentro de tu carpeta css y reemplázalo.
-4. Confirma que existan:
-   assets/icons/dresscode.svg
-   assets/icons/celebration.svg
-   assets/icons/gifts.svg
-5. Abre la invitación y presiona Ctrl + F5.
+1. Haz un commit de respaldo.
+2. Reemplaza index.html.
+3. Reemplaza css/sections.css.
+4. Confirma que assets/icons contenga todos los SVG del kit.
+5. Presiona Ctrl + F5.
+6. Prueba en computadora y celular.

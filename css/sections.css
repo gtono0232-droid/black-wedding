@@ -300,3 +300,91 @@ section p{
         min-height:auto;
     }
 }
+
+
+/* ===========================
+   IDENTIDAD VISUAL OFICIAL
+=========================== */
+
+.official-monogram{
+    width:88px;
+    margin:0 auto 12px;
+}
+
+.official-monogram img{
+    width:100%;
+    height:116px;
+    object-fit:contain;
+}
+
+.section-icon{
+    width:58px;
+    height:58px;
+    margin:0 auto 18px;
+    display:grid;
+    place-items:center;
+}
+
+.section-icon img{
+    width:40px;
+    height:40px;
+    object-fit:contain;
+}
+
+.section-icon.small{
+    width:48px;
+    height:48px;
+    margin-bottom:12px;
+}
+
+.section-icon.small img{
+    width:34px;
+    height:34px;
+}
+
+.brand-divider{
+    width:min(86%,520px);
+    margin:0 auto;
+    padding:34px 0;
+    background:var(--paper);
+}
+
+.brand-divider img{
+    width:100%;
+    height:72px;
+    object-fit:contain;
+}
+
+.section-beige + .brand-divider{
+    background:var(--beige);
+}
+
+.section-olive + .brand-divider{
+    background:var(--olive);
+}
+
+.wedding-footer{
+    padding:90px 24px;
+    text-align:center;
+}
+
+.footer-monogram{
+    width:112px;
+    height:150px;
+    margin:0 auto 22px;
+    object-fit:contain;
+}
+
+.wedding-footer h2{
+    max-width:650px;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:clamp(36px,6vw,60px);
+}
+
+.wedding-footer p:last-child{
+    margin-top:18px;
+    color:var(--olive-dark);
+    font-family:var(--font-title);
+    font-size:28px;
+}
