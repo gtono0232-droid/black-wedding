@@ -8,51 +8,42 @@ const music = document.getElementById("music");
 
 const musicButton = document.getElementById("musicButton");
 
+const envelope = document.getElementById("envelope");
+
 let playing = true;
 
 
 
 button.addEventListener("click", () => {
 
+    envelope.classList.add("open");
 
-    welcome.classList.add("hide");
-
+    music.play().catch(() => {
+        console.log("Audio bloqueado");
+    });
 
     setTimeout(() => {
 
+    welcome.classList.add("hide");
+
+},2600);
+
+    setTimeout(() => {
 
         welcome.style.display = "none";
-
-
-        music.play().catch(() => {
-
-            console.log("Audio bloqueado");
-
-        });
-
-
         musicButton.style.display = "block";
 
-
         content.classList.remove("hidden");
-
         content.classList.add("show-content");
 
-
         window.scrollTo({
-
-            top:0,
-
-            behavior:"smooth"
-
+            top: 0,
+            behavior: "smooth"
         });
 
-
-    },1500);
-
+    }, 3900);
 
 });
-
 
 
 
