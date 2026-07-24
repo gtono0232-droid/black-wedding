@@ -1,0 +1,12 @@
+ACTUALIZACIÓN: SOBRE VERTICAL Y TARJETA LATERAL
+
+Cambios realizados:
+- El sobre ahora tiene orientación vertical.
+- Al tocar el sello, la tapa abre y la tarjeta se desliza hacia la derecha.
+- Se conserva el diseño, colores, textos, fotografías, música y RSVP.
+- No se modificó ninguna otra sección de la invitación.
+
+Publicación:
+Sube nuevamente esta carpeta completa a Production deploys en Netlify.
+El enlace https://bcv2026.netlify.app/ permanecerá igual.
+Después actualiza la página o abre una pestaña privada para evitar la caché.

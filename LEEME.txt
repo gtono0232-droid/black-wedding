@@ -1,26 +1,15 @@
-CIERRE DEFINITIVO — MEDALLÓN DORADO
+ACTUALIZACIÓN: FOTO EN “BIENVENIDOS”
 
-SECUENCIA
-1. Al llegar al footer comienza el splash existente.
-2. La invitación permanece visible 20 segundos.
-3. La información y la música comienzan a desvanecerse.
-4. Hojas doradas llegan desde los bordes y convergen en el centro.
-5. Aparece el medallón: CÉSAR · VIANEY · 2026.
-6. Un reflejo metálico cruza el medallón periódicamente.
-7. Debajo aparece: César C.G. 2026™.
+1. Abre tu carpeta COMPLETA actual de la invitación.
+2. Copia index.html de este paquete y reemplaza el index.html existente.
+3. Copia css/welcome-photo.css dentro de la carpeta css.
+4. Copia assets/images/welcome-photo.webp dentro de assets/images.
+5. No reemplaces sections.css, final-medallion.js ni wedding.mp3.
+6. Prueba index.html y luego vuelve a subir la carpeta COMPLETA a Netlify.
 
-INSTALACIÓN
-1. Haz un commit o copia de respaldo.
-2. Reemplaza index.html.
-3. Reemplaza css/sections.css.
-4. Copia js/final-medallion.js.
-5. Copia assets/icons/final-medallion.svg.
-6. Conserva js/main.js y js/laurel-splash.js.
-7. Elimina referencias a js/self-destruct.js o js/final-seal.js si las agregaste.
-8. Presiona Ctrl + F5.
-
-AJUSTAR EL TIEMPO
-En js/final-medallion.js busca:
-}, 20000);
-
-20000 = 20 segundos.
+Esta actualización utiliza la fotografía original _DSC9074 y agrega:
+- marco en arco dorado;
+- “Bienvenidos / A nuestra boda”;
+- nombres, fecha y lugar;
+- frase final;
+- adaptación para Android y iPhone.

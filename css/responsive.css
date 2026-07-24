@@ -1,11 +1,11 @@
 @media (max-width:760px){
     .welcome{padding:22px 10px}
     .welcome::before{inset:12px}
-    .envelope-scene{width:min(96vw,500px)}
+    .envelope-scene{width:min(74vw,390px)}
 
     .invitation-card{
-        left:6%;
-        width:88%;
+        left:9%;
+        width:82%;
         padding:18px 16px;
     }
 

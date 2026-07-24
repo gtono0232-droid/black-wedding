@@ -1,0 +1,23 @@
+ACTUALIZACIÓN — GALERÍA, BENDICIÓN Y CORTEJO
+
+CAMBIOS REALIZADOS
+1. Se corrigió gallery-7.jpg y ahora se llama gallery-07.jpg.
+2. La galería muestra las 10 fotografías disponibles.
+3. Las fotografías fueron reordenadas en una composición editorial.
+4. gallery-01.jpg fue convertido a JPEG real para mejorar compatibilidad.
+5. Se agregó después de Bienvenidos la sección:
+   "Con la bendición de nuestras madres"
+   - María Guadalupe Silva Macías
+   - María de la Luz Guzmán Villanueva
+6. Se agregó la sección "Nuestros acompañantes" con:
+   - Damas de honor
+   - Caballeros de honor
+
+PENDIENTE
+Los nombres de las damas y los caballeros todavía no fueron proporcionados.
+Actualmente aparece "Nombres pendientes". Cuando estén disponibles, se reemplazan
+en index.html dentro de las listas con clase party-list.
+
+PUBLICACIÓN
+Sube esta carpeta completa nuevamente a Production deploys en Netlify.
+El enlace bcv2026.netlify.app no cambia.

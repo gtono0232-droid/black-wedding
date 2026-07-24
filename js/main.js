@@ -147,7 +147,7 @@ setInterval(updateCountdown, 1000);
 =========================== */
 
 const revealElements = document.querySelectorAll(
-    ".section-inner, .time-box, .photo, .event-item, .important-card, .rsvp-box, .wedding-footer .section-inner"
+    ".section-inner, .time-box, .photo, .event-item, .important-card, .party-group, .hashtag-card, .rsvp-box, .wedding-footer .section-inner"
 );
 
 revealElements.forEach((element, index) => {
@@ -311,5 +311,50 @@ if (galleryPhotos.length) {
         if (event.key === "Escape") closeLightbox();
         if (event.key === "ArrowLeft") showPhoto(currentIndex - 1);
         if (event.key === "ArrowRight") showPhoto(currentIndex + 1);
+    });
+}
+
+
+/* ===========================
+   HASHTAG Y SERVICIO DE FOTOS
+=========================== */
+const PHOTO_UPLOAD_URL = ""; // Pega aquí el enlace de Dropbox, Google Photos u otro servicio.
+const uploadPhotosButton = document.getElementById("uploadPhotosButton");
+
+if (uploadPhotosButton && PHOTO_UPLOAD_URL) {
+    uploadPhotosButton.href = PHOTO_UPLOAD_URL;
+    uploadPhotosButton.target = "_blank";
+    uploadPhotosButton.rel = "noopener";
+    uploadPhotosButton.classList.remove("upload-disabled");
+    uploadPhotosButton.removeAttribute("aria-disabled");
+    uploadPhotosButton.textContent = "Subir fotos";
+}
+
+const copyHashtagButton = document.getElementById("copyHashtag");
+const weddingHashtag = document.getElementById("weddingHashtag");
+const copyHashtagMessage = document.getElementById("copyHashtagMessage");
+
+if (copyHashtagButton && weddingHashtag) {
+    copyHashtagButton.addEventListener("click", async () => {
+        const text = weddingHashtag.textContent.trim();
+
+        try {
+            await navigator.clipboard.writeText(text);
+            copyHashtagMessage.textContent = "Hashtag copiado";
+        } catch (error) {
+            const input = document.createElement("textarea");
+            input.value = text;
+            input.style.position = "fixed";
+            input.style.opacity = "0";
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand("copy");
+            input.remove();
+            copyHashtagMessage.textContent = "Hashtag copiado";
+        }
+
+        setTimeout(() => {
+            copyHashtagMessage.textContent = "";
+        }, 2400);
     });
 }

@@ -1,0 +1,167 @@
+/* Bienvenida con fotografía — César & Vianey */
+.welcome-photo-section{
+    position:relative;
+    overflow:hidden;
+    padding-top:clamp(72px,9vw,112px);
+    padding-bottom:clamp(82px,10vw,132px);
+}
+
+.welcome-photo-section::before,
+.welcome-photo-section::after{
+    content:"";
+    position:absolute;
+    width:280px;
+    height:280px;
+    pointer-events:none;
+    opacity:.11;
+    background:
+        radial-gradient(ellipse at 35% 65%, transparent 47%, var(--olive) 49% 51%, transparent 53%),
+        radial-gradient(ellipse at 65% 35%, transparent 47%, var(--gold) 49% 51%, transparent 53%);
+    transform:rotate(25deg);
+}
+
+.welcome-photo-section::before{top:-145px;left:-150px}
+.welcome-photo-section::after{right:-150px;bottom:-145px;transform:rotate(205deg)}
+
+.welcome-photo-inner{
+    position:relative;
+    z-index:1;
+    max-width:760px;
+}
+
+.welcome-ornament,
+.welcome-heart,
+.welcome-and{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+}
+
+.welcome-ornament span:not(.welcome-leaf),
+.welcome-heart span,
+.welcome-and span{
+    width:76px;
+    height:1px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+
+.welcome-leaf{
+    color:var(--gold);
+    font-size:26px;
+    line-height:1;
+}
+
+.welcome-heading{
+    margin:20px 0 10px;
+    color:var(--gold);
+    font-size:clamp(54px,9vw,92px);
+    font-weight:500;
+    letter-spacing:.075em;
+    text-transform:uppercase;
+}
+
+.welcome-subtitle{
+    margin-bottom:34px;
+    color:var(--olive-dark);
+    font-family:var(--font-body);
+    font-size:clamp(12px,2.2vw,18px);
+    font-weight:500;
+    letter-spacing:.36em;
+    text-transform:uppercase;
+}
+
+.welcome-photo-frame{
+    width:min(100%,570px);
+    margin:0 auto 42px;
+    padding:6px;
+    border:1px solid rgba(177,132,55,.78);
+    border-radius:285px 285px 4px 4px;
+    background:rgba(255,255,255,.55);
+    box-shadow:0 24px 58px rgba(37,47,38,.15);
+    overflow:hidden;
+}
+
+.welcome-photo-frame img{
+    display:block;
+    width:100%;
+    aspect-ratio:5 / 7;
+    object-fit:cover;
+    object-position:center center;
+    border-radius:278px 278px 2px 2px;
+    transform:scale(1.002);
+    animation:welcomePhotoReveal 1.5s cubic-bezier(.2,.75,.2,1) both;
+}
+
+.welcome-couple{margin-top:4px}
+
+.welcome-name{
+    margin:0;
+    color:var(--olive-dark);
+    font-family:var(--font-title);
+    font-size:clamp(48px,8vw,76px);
+    font-weight:500;
+    line-height:.95;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+
+.welcome-and{margin:8px 0 10px}
+.welcome-and em{
+    color:var(--gold);
+    font-family:var(--font-title);
+    font-size:42px;
+    font-weight:400;
+    line-height:1;
+}
+
+.welcome-date{
+    margin-top:34px;
+    color:var(--gold);
+    font-family:var(--font-title);
+    font-size:clamp(24px,4.5vw,38px);
+    letter-spacing:.18em;
+}
+.welcome-date span{padding:0 .2em;color:rgba(177,132,55,.62)}
+
+.welcome-venue{
+    margin-top:5px;
+    color:var(--olive-dark);
+    font-family:var(--font-title);
+    font-size:clamp(25px,4vw,36px);
+    letter-spacing:.08em;
+}
+
+.welcome-heart{
+    margin:34px 0 18px;
+    color:var(--gold);
+    font-size:28px;
+}
+
+.welcome-quote{
+    color:var(--olive-dark);
+    font-family:var(--font-title);
+    font-size:clamp(21px,3.7vw,30px);
+    font-style:italic;
+    line-height:1.45;
+}
+
+@keyframes welcomePhotoReveal{
+    from{opacity:0;transform:scale(1.05)}
+    to{opacity:1;transform:scale(1.002)}
+}
+
+@media (max-width:600px){
+    .welcome-photo-section{padding-left:18px;padding-right:18px}
+    .welcome-heading{letter-spacing:.045em}
+    .welcome-subtitle{letter-spacing:.25em}
+    .welcome-photo-frame{width:min(94%,470px);padding:4px}
+    .welcome-ornament span:not(.welcome-leaf),
+    .welcome-heart span,
+    .welcome-and span{width:54px}
+    .welcome-date{letter-spacing:.1em}
+}
+
+@media (prefers-reduced-motion:reduce){
+    .welcome-photo-frame img{animation:none}
+}

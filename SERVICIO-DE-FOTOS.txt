@@ -1,0 +1,11 @@
+CÓMO ACTIVAR EL BOTÓN “SUBIR FOTOS”
+
+1. Abre js/main.js.
+2. Busca esta línea cerca del final:
+   const PHOTO_UPLOAD_URL = "";
+3. Pega entre las comillas el enlace de tu solicitud de archivos de Dropbox, álbum colaborativo u otro servicio.
+
+Ejemplo:
+const PHOTO_UPLOAD_URL = "https://www.dropbox.com/request/XXXXXXXX";
+
+Al guardar y volver a subir el proyecto a Netlify, el botón se activará automáticamente y cambiará su texto a “Subir fotos”.

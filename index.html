@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/portada.css">
     <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/welcome-photo.css">
     <link rel="stylesheet" href="css/responsive.css">
 
     <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
@@ -38,8 +39,7 @@
                     Vianey
                 </h1>
 
-                <h2>26 · Septiembre · 2026</h2>
-                <p class="venue-name">Casa San Ángel</p>
+                           
             </div>
 
             <div class="envelope-left"></div>
@@ -52,19 +52,92 @@
             </button>
         </div>
 
-        <p class="open-instruction">Toca el sello para abrir la invitación</p>
+        
     </div>
 </main>
 
 <div id="content" class="hidden">
 
-    <section class="invitation section-paper">
-        <div class="section-inner">
-            <p class="eyebrow">César &amp; Vianey</p>
-            <h2>Bienvenidos</h2>
-            <p>Con mucha alegría queremos compartir este día tan especial con ustedes.</p>
+    <section class="invitation welcome-photo-section section-paper">
+        <div class="section-inner welcome-photo-inner">
+            <div class="welcome-ornament" aria-hidden="true">
+                <span></span>
+                <span class="welcome-leaf">❧</span>
+                <span></span>
+            </div>
+
+            <h2 class="welcome-heading">Bienvenidos</h2>
+            <p class="welcome-subtitle">A nuestra boda</p>
+
+            <figure class="welcome-photo-frame">
+                <img
+                    src="assets/images/welcome-photo.webp"
+                    alt="César y Vianey bajo un arco"
+                    loading="eager"
+                    fetchpriority="high"
+                >
+            </figure>
+
+            <div class="welcome-couple">
+                <p class="welcome-name">César</p>
+                <div class="welcome-and" aria-label="y">
+                    <span></span><em>y</em><span></span>
+                </div>
+                <p class="welcome-name">Vianey</p>
+            </div>
+
+            <p class="welcome-date">26 <span>·</span> 09 <span>·</span> 2026</p>
+            <p class="welcome-venue">Casa San Ángel</p>
+
+            <div class="welcome-heart" aria-hidden="true"><span></span>♡<span></span></div>
+            
         </div>
     </section>
+
+    <section class="family-blessing section-paper">
+        <div class="section-inner narrow ceremonial-card">
+            <p class="eyebrow">Con amor y gratitud</p>
+            <h2>Con la bendición de nuestras madres</h2>
+            <div class="ceremonial-divider" aria-hidden="true">❧</div>
+            <div class="family-names">
+                <p>María Guadalupe Silva Macías</p>
+                <span>&amp;</span>
+                <p>María de la Luz Guzmán Villanueva</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="brand-divider" aria-hidden="true">
+        <img src="assets/icons/botanical-divider.svg" alt="">
+    </div>
+
+    <section class="wedding-party section-beige">
+        <div class="section-inner wide">
+            <p class="eyebrow">Cortejo</p>
+            <h2>Nuestros acompañantes</h2>
+            <div class="party-grid">
+                <article class="party-group">
+                    <h3>Damas de honor</h3>
+                    <p>Mary Betancourt</p>
+                    <p>Nancy Colmenero</p>
+                    <p>Ivette Silva</p>
+                    <p>Ana E. Hernández</p>
+                </article>
+                <div class="party-separator" aria-hidden="true">❧</div>
+                <article class="party-group">
+                    <h3>Caballeros de honor</h3>
+                    <p>Marcos Colesio</p>
+                    <p>Luis M. Colesio</p>
+                    <p>Edgar D. Colesio</p>
+                    <p>Salvador Álvarez</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <div class="brand-divider" aria-hidden="true">
+        <img src="assets/icons/botanical-divider.svg" alt="">
+    </div>
 
     <section class="story section-olive">
         <div class="section-inner narrow">
@@ -110,76 +183,20 @@
 
             <p class="eyebrow">Nuestros momentos</p>
             <h2>Nuestra historia en imágenes</h2>
+            <p class="gallery-intro">Cada fotografía guarda un instante que nos acercó a este día.</p>
+            <div class="welcome-heart" aria-hidden="true"><span></span>♡<span></span></div>
 
-            <p class="gallery-intro">
-                Cada fotografía representa un instante que nos acercó a este día.
-                Gracias por acompañarnos a escribir el siguiente capítulo de nuestra historia.
-            </p>
-
-            <div class="editorial-gallery clean-gallery">
-                <figure class="gallery-item gallery-hero">
-                    <img
-                        src="assets/images/gallery/gallery-01.jpg"
-                        class="photo"
-                        alt="César y Vianey besándose bajo los arcos"
-                        loading="eager"
-                        fetchpriority="high"
-                    >
-                </figure>
-
-                <figure class="gallery-item">
-                    <img
-                        src="assets/images/gallery/gallery-02.jpg"
-                        class="photo"
-                        alt="César y Vianey en las escaleras"
-                        loading="lazy"
-                    >
-                </figure>
-
-                <figure class="gallery-item">
-                    <img
-                        src="assets/images/gallery/gallery-03.jpg"
-                        class="photo"
-                        alt="Retrato de César y Vianey bajo los arcos"
-                        loading="lazy"
-                    >
-                </figure>
-
-                <figure class="gallery-item">
-                    <img
-                        src="assets/images/gallery/gallery-04.jpg"
-                        class="photo"
-                        alt="César y Vianey en el balcón"
-                        loading="lazy"
-                    >
-                </figure>
-
-                <figure class="gallery-item">
-                    <img
-                        src="assets/images/gallery/gallery-05.jpg"
-                        class="photo"
-                        alt="Primer plano de César y Vianey"
-                        loading="lazy"
-                    >
-                </figure>
-
-                <figure class="gallery-item">
-                    <img
-                        src="assets/images/gallery/gallery-06.jpg"
-                        class="photo"
-                        alt="Detalle del anillo de compromiso"
-                        loading="lazy"
-                    >
-                </figure>
-
-                <figure class="gallery-item">
-                    <img
-                        src="assets/images/gallery/gallery-07.jpg"
-                        class="photo"
-                        alt="Detalle de las manos y el anillo"
-                        loading="lazy"
-                    >
-                </figure>
+            <div class="editorial-gallery masonry-gallery">
+                <figure class="gallery-item"><img src="assets/images/gallery/gallery-01.jpg" class="photo" alt="César y Vianey bajo los arcos" loading="eager" fetchpriority="high"></figure>
+                <figure class="gallery-item"><img src="assets/images/gallery/gallery-04.jpg" class="photo" alt="César y Vianey en el balcón" loading="lazy"></figure>
+                <figure class="gallery-item"><img src="assets/images/gallery/gallery-02.jpg" class="photo" alt="César y Vianey en las escaleras" loading="lazy"></figure>
+                <figure class="gallery-item"><img src="assets/images/gallery/gallery-06.jpg" class="photo" alt="Detalle romántico de César y Vianey" loading="lazy"></figure>
+                <figure class="gallery-item"><img src="assets/images/gallery/gallery-03.jpg" class="photo" alt="Retrato de César y Vianey" loading="lazy"></figure>
+                <figure class="gallery-item"><img src="assets/images/gallery/gallery-08.jpg" class="photo" alt="Momento de la sesión de César y Vianey" loading="lazy"></figure>
+                <figure class="gallery-item"><img src="assets/images/gallery/gallery-05.jpg" class="photo" alt="Primer plano de César y Vianey" loading="lazy"></figure>
+                <figure class="gallery-item"><img src="assets/images/gallery/gallery-09.jpg" class="photo" alt="César y Vianey compartiendo un momento" loading="lazy"></figure>
+                <figure class="gallery-item"><img src="assets/images/gallery/gallery-07.jpg" class="photo" alt="Detalle de las manos y el anillo" loading="lazy"></figure>
+                <figure class="gallery-item"><img src="assets/images/gallery/gallery-10.jpg" class="photo" alt="Cierre de la sesión de César y Vianey" loading="lazy"></figure>
             </div>
         </div>
     </section>
@@ -356,6 +373,30 @@
 
                 <p id="rsvpMessage" class="rsvp-message"></p>
             </div>
+        </div>
+    </section>
+
+    <div class="brand-divider" aria-hidden="true">
+        <img src="assets/icons/botanical-divider.svg" alt="">
+    </div>
+
+    <section class="share-memories section-olive">
+        <div class="section-inner narrow">
+            <p class="eyebrow light">Comparte este día</p>
+            <h2>Captura cada momento</h2>
+            <p>Ayúdanos a conservar los recuerdos de nuestra boda compartiendo tus fotografías y videos.</p>
+
+            <div class="hashtag-card">
+                <small>Nuestro hashtag oficial</small>
+                <strong id="weddingHashtag">#BodaCesarVianey2026</strong>
+                <button id="copyHashtag" class="memory-button secondary-light" type="button">Copiar hashtag</button>
+                <span id="copyHashtagMessage" class="copy-message" aria-live="polite"></span>
+            </div>
+
+            <a id="uploadPhotosButton" class="memory-button upload-disabled" href="#" aria-disabled="true">
+                Subir fotos · Próximamente
+            </a>
+            <p class="upload-note">El botón quedará activo en cuanto conectemos el servicio de fotografías.</p>
         </div>
     </section>
 

@@ -1,0 +1,8 @@
+ACTUALIZACIÓN DE ANIMACIÓN
+
+- Se conserva el sobre vertical.
+- La tarjeta ya no sale hacia un lado.
+- La invitación sale hacia arriba y permanece centrada.
+- No se modificaron imágenes, textos, colores, música ni RSVP.
+
+Sube nuevamente esta carpeta completa a Netlify.

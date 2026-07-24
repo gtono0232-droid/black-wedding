@@ -95,7 +95,7 @@
             window.setTimeout(() => {
                 overlay.classList.add("is-visible");
             }, 300);
-        }, 20000);
+        }, 10000);
     }
 
     const observer = new IntersectionObserver(
