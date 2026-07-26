@@ -45,6 +45,7 @@ const guestID = params.get("id");
 const guestName = document.getElementById("guestName");
 const guestPasses = document.getElementById("guestPasses");
 const guestTable = document.getElementById("guestTable");
+const ceremonySection = document.getElementById("ceremonyStep");
 const yesButton = document.getElementById("yesRSVP");
 const noButton = document.getElementById("noRSVP");
 const rsvpMessage = document.getElementById("rsvpMessage");
@@ -58,12 +59,20 @@ const invitadoValido =
 
 if (invitadoValido) {
     const invitado = invitados[guestID];
+    const acceso = (invitado.acceso || "").trim().toLowerCase();
 
     guestName.textContent = invitado.nombre;
     guestPasses.textContent =
         `Tenemos reservados ${invitado.pases} lugares para ustedes.`;
-    guestTable.textContent = `Mesa asignada: ${invitado.mesa}`;
-} else {
+
+    if (ceremonySection && acceso === "recepción") {
+        ceremonySection.style.display = "none";
+    }
+
+    guestTable.textContent =
+        "Consulta tu mesa al llegar a la recepción.";
+}
+ else {
     guestName.textContent = "Invitado especial";
     guestPasses.textContent =
         "Abre la invitación desde tu enlace personalizado para confirmar.";
@@ -75,7 +84,7 @@ async function sendRSVP(respuesta) {
     if (!invitadoValido) return;
 
     const invitado = invitados[guestID];
-
+    
     yesButton.disabled = true;
     noButton.disabled = true;
     rsvpMessage.textContent = "Registrando respuesta...";
@@ -88,7 +97,7 @@ async function sendRSVP(respuesta) {
                 codigo: guestID,
                 nombre: invitado.nombre,
                 pases: invitado.pases,
-                mesa: invitado.mesa,
+                mesa: "",
                 respuesta
             })
         });
@@ -96,7 +105,11 @@ async function sendRSVP(respuesta) {
         if (respuesta === "Confirmado") {
             rsvpMessage.textContent =
                 `Gracias ${invitado.nombre}, hemos recibido su confirmación.`;
-            guestTable.style.display = "block";
+            guestTable.textContent =
+    "Consulta tu mesa el día de la recepción.";
+
+guestTable.style.display = "block";
+guestTable.classList.remove("hidden-table");
         } else {
             rsvpMessage.textContent =
                 `Gracias ${invitado.nombre}. Lamentamos no contar con su presencia.`;
@@ -184,7 +197,7 @@ if (prefersReducedMotion || !("IntersectionObserver" in window)) {
    GALERÍA EDITORIAL AMPLIABLE
 =========================== */
 
-const galleryPhotos = Array.from(document.querySelectorAll(".editorial-gallery .photo"));
+const galleryPhotos = Array.from(document.querySelectorAll(".editorial-gallery .photo, .wedding-carousel .carousel-slide img"));
 
 if (galleryPhotos.length) {
     const lightbox = document.createElement("div");
@@ -318,7 +331,7 @@ if (galleryPhotos.length) {
 /* ===========================
    HASHTAG Y SERVICIO DE FOTOS
 =========================== */
-const PHOTO_UPLOAD_URL = ""; // Pega aquí el enlace de Dropbox, Google Photos u otro servicio.
+const PHOTO_UPLOAD_URL = "https://www.dropbox.com/request/rqq43mxjyzpseo2dskch";
 const uploadPhotosButton = document.getElementById("uploadPhotosButton");
 
 if (uploadPhotosButton && PHOTO_UPLOAD_URL) {
@@ -358,3 +371,58 @@ if (copyHashtagButton && weddingHashtag) {
         }, 2400);
     });
 }
+
+
+/* ===========================
+   CARRUSEL DE FOTOGRAFÍAS
+=========================== */
+(() => {
+    const carousel = document.getElementById("weddingCarousel");
+    if (!carousel) return;
+
+    const track = carousel.querySelector(".carousel-track");
+    const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
+    const prev = carousel.querySelector(".carousel-prev");
+    const next = carousel.querySelector(".carousel-next");
+    const dotsContainer = carousel.querySelector(".carousel-dots");
+    let index = 0;
+    let timer;
+    let startX = 0;
+
+    const dots = slides.map((_, i) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "carousel-dot";
+        dot.setAttribute("aria-label", `Ver fotografía ${i + 1}`);
+        dot.addEventListener("click", () => goTo(i, true));
+        dotsContainer.appendChild(dot);
+        return dot;
+    });
+
+    function goTo(newIndex, restart = false) {
+        index = (newIndex + slides.length) % slides.length;
+        track.style.transform = `translateX(-${index * 100}%)`;
+        slides.forEach((slide, i) => slide.classList.toggle("is-active", i === index));
+        dots.forEach((dot, i) => dot.classList.toggle("is-active", i === index));
+        if (restart) startAutoplay();
+    }
+
+    function startAutoplay() {
+        clearInterval(timer);
+        timer = setInterval(() => goTo(index + 1), 6000);
+    }
+
+    prev?.addEventListener("click", () => goTo(index - 1, true));
+    next?.addEventListener("click", () => goTo(index + 1, true));
+    carousel.addEventListener("mouseenter", () => clearInterval(timer));
+    carousel.addEventListener("mouseleave", startAutoplay);
+    carousel.addEventListener("touchstart", event => { startX = event.touches[0].clientX; clearInterval(timer); }, {passive:true});
+    carousel.addEventListener("touchend", event => {
+        const delta = event.changedTouches[0].clientX - startX;
+        if (Math.abs(delta) > 45) goTo(index + (delta < 0 ? 1 : -1));
+        startAutoplay();
+    }, {passive:true});
+
+    goTo(0);
+    startAutoplay();
+})();

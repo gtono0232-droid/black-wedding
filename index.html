@@ -27,9 +27,10 @@
     <meta name="twitter:description" content="26 de septiembre de 2026 · Casa San Ángel">
     <meta name="twitter:image" content="https://bcv2026.netlify.app/assets/images/og-preview.jpg?v=1">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
@@ -88,7 +89,7 @@
                 <span></span>
             </div>
 
-            <h2 class="welcome-heading">Bienvenidos</h2>
+            <h1 class="welcome-heading">Bienvenidos</h1>
             <p class="welcome-subtitle">A nuestra boda</p>
 
             <figure class="welcome-photo-frame">
@@ -122,9 +123,9 @@
             <h2>Con la bendición de nuestras madres</h2>
             <div class="ceremonial-divider" aria-hidden="true">❧</div>
             <div class="family-names">
-                <p>María Guadalupe Silva Macías</p>
-                <span>&amp;</span>
                 <p>María de la Luz Guzmán Villanueva</p>
+                <span>&amp;</span>
+                <p>Lorena Silva Macias</p>
             </div>
         </div>
     </section>
@@ -136,18 +137,20 @@
     <section class="wedding-party section-beige">
         <div class="section-inner wide">
             <p class="eyebrow">Cortejo</p>
-            <h2>Nuestros acompañantes</h2>
+            <article class="party-group maid-of-honor-card">
+                <h3>Dama de Honor</h3>
+                <p>Mary Betancourt</p>
+            </article>
             <div class="party-grid">
                 <article class="party-group">
-                    <h3>Damas de honor</h3>
-                    <p>Mary Betancourt</p>
+                    <h3>Damas</h3>
                     <p>Nancy Colmenero</p>
                     <p>Ivette Silva</p>
                     <p>Ana E. Hernández</p>
                 </article>
                 <div class="party-separator" aria-hidden="true">❧</div>
                 <article class="party-group">
-                    <h3>Caballeros de honor</h3>
+                    <h3>Caballeros</h3>
                     <p>Marcos Colesio</p>
                     <p>Luis M. Colesio</p>
                     <p>Edgar D. Colesio</p>
@@ -203,22 +206,22 @@
                 <img src="assets/icons/gallery.svg" alt="">
             </div>
 
-            <p class="eyebrow">Nuestros momentos</p>
-            <h2>Nuestra historia en imágenes</h2>
-            <p class="gallery-intro">Cada fotografía guarda un instante que nos acercó a este día.</p>
+           
             <div class="welcome-heart" aria-hidden="true"><span></span>♡<span></span></div>
-
-            <div class="editorial-gallery masonry-gallery">
-                <figure class="gallery-item"><img src="assets/images/gallery/gallery-01.jpg" class="photo" alt="César y Vianey bajo los arcos" loading="eager" fetchpriority="high"></figure>
-                <figure class="gallery-item"><img src="assets/images/gallery/gallery-04.jpg" class="photo" alt="César y Vianey en el balcón" loading="lazy"></figure>
-                <figure class="gallery-item"><img src="assets/images/gallery/gallery-02.jpg" class="photo" alt="César y Vianey en las escaleras" loading="lazy"></figure>
-                <figure class="gallery-item"><img src="assets/images/gallery/gallery-06.jpg" class="photo" alt="Detalle romántico de César y Vianey" loading="lazy"></figure>
-                <figure class="gallery-item"><img src="assets/images/gallery/gallery-03.jpg" class="photo" alt="Retrato de César y Vianey" loading="lazy"></figure>
-                <figure class="gallery-item"><img src="assets/images/gallery/gallery-08.jpg" class="photo" alt="Momento de la sesión de César y Vianey" loading="lazy"></figure>
-                <figure class="gallery-item"><img src="assets/images/gallery/gallery-05.jpg" class="photo" alt="Primer plano de César y Vianey" loading="lazy"></figure>
-                <figure class="gallery-item"><img src="assets/images/gallery/gallery-09.jpg" class="photo" alt="César y Vianey compartiendo un momento" loading="lazy"></figure>
-                <figure class="gallery-item"><img src="assets/images/gallery/gallery-07.jpg" class="photo" alt="Detalle de las manos y el anillo" loading="lazy"></figure>
-                <figure class="gallery-item"><img src="assets/images/gallery/gallery-10.jpg" class="photo" alt="Cierre de la sesión de César y Vianey" loading="lazy"></figure>
+            <div class="wedding-carousel" id="weddingCarousel" aria-label="Galería de fotografías de César y Vianey">
+                <div class="carousel-viewport">
+                    <div class="carousel-track">
+                        <figure class="carousel-slide is-active"><img src="assets/images/gallery-final/foto-01.jpg" alt="César y Vianey durante su sesión fotográfica" loading="eager" fetchpriority="high"></figure>
+                        <figure class="carousel-slide"><img src="assets/images/gallery-final/foto-02.jpg" alt="César y Vianey compartiendo un momento especial" loading="lazy"></figure>
+                        <figure class="carousel-slide"><img src="assets/images/gallery-final/foto-03.jpg" alt="Retrato de César y Vianey" loading="lazy"></figure>
+                        <figure class="carousel-slide"><img src="assets/images/gallery-final/foto-04.jpg" alt="César y Vianey juntos" loading="lazy"></figure>
+                        <figure class="carousel-slide"><img src="assets/images/gallery-final/foto-05.jpg" alt="Momento romántico de César y Vianey" loading="lazy"></figure>
+                        <figure class="carousel-slide"><img src="assets/images/gallery-final/foto-06.jpg" alt="César y Vianey en su sesión fotográfica" loading="lazy"></figure>
+                    </div>
+                    <button class="carousel-button carousel-prev" type="button" aria-label="Fotografía anterior">‹</button>
+                    <button class="carousel-button carousel-next" type="button" aria-label="Fotografía siguiente">›</button>
+                </div>
+                <div class="carousel-dots" aria-label="Seleccionar fotografía"></div>
             </div>
         </div>
     </section>
@@ -237,14 +240,14 @@
 
             <div class="premium-timeline">
 
-                <article class="timeline-step">
-                    <div class="timeline-marker">
-                        <img src="assets/icons/timeline-ceremony.svg" alt="">
-                    </div>
+                <article id="ceremonyStep" class="timeline-step">
+    <div class="timeline-marker">
+        <img src="assets/icons/timeline-ceremony.svg" alt="">
+    </div>
 
-                    <div class="timeline-content">
-                        <span class="timeline-time">7:00 PM</span>
-                        <h3>Ceremonia</h3>
+    <div class="timeline-content">
+        <span class="timeline-time">7:00 PM</span>
+        <h3>Ceremonia</h3>
                         <p>El momento en que comenzará nuestra nueva historia.</p>
                     </div>
                 </article>
@@ -257,7 +260,7 @@
                     <div class="timeline-content">
                         <span class="timeline-time">8:00 PM</span>
                         <h3>Recepción</h3>
-                        <p>Brindaremos juntos por el amor y por este día inolvidable.</p>
+                        <p>Brindaremos juntos por este día inolvidable.</p>
                     </div>
                 </article>
 
@@ -382,6 +385,7 @@
             <p class="eyebrow">Confirmación</p>
             <h2>¿Nos acompañas?</h2>
             <p>Nos encantaría contar con tu presencia en este día tan especial.</p>
+            <p class="rsvp-deadline">Agradecemos confirmar tu asistencia antes del <strong>1 de septiembre de 2026</strong>.</p>
 
             <div class="rsvp-box">
                 <h3 id="guestName">Invitado especial</h3>
@@ -410,15 +414,15 @@
 
             <div class="hashtag-card">
                 <small>Nuestro hashtag oficial</small>
-                <strong id="weddingHashtag">#BodaCesarVianey2026</strong>
+                <strong id="weddingHashtag">#BodaCesarVianey26</strong>
                 <button id="copyHashtag" class="memory-button secondary-light" type="button">Copiar hashtag</button>
                 <span id="copyHashtagMessage" class="copy-message" aria-live="polite"></span>
             </div>
 
-            <a id="uploadPhotosButton" class="memory-button upload-disabled" href="#" aria-disabled="true">
-                Subir fotos · Próximamente
+            <a id="uploadPhotosButton" class="memory-button" href="https://www.dropbox.com/request/rqq43mxjyzpseo2dskch" target="_blank" rel="noopener">
+                Subir fotos
             </a>
-            <p class="upload-note">El botón quedará activo en cuanto conectemos el servicio de fotografías.</p>
+            <p class="upload-note">Puedes compartir fotografías y videos sin crear una cuenta de Dropbox.</p>
         </div>
     </section>
 
@@ -456,7 +460,5 @@
 <script src="data/invitados.js"></script>
 <script src="js/main.js"></script>
 <script src="js/laurel-splash.js"></script>
-<script src="js/final-medallion.js"></script>
-
 </body>
 </html>

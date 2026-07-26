@@ -9,6 +9,8 @@
     --white:#ffffff;
     --line:rgba(184,148,82,.35);
     --shadow-soft:0 18px 45px rgba(74,68,61,.12);
-    --font-title:'Cormorant Garamond',serif;
-    --font-text:'Montserrat',sans-serif;
+
+    /* Tipografías */
+    --font-title:'Allura', cursive;
+    --font-text:'Lora', serif;
 }
